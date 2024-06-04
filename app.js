@@ -24,6 +24,12 @@ edit.appendChild(edittext)
 li.appendChild(edit)
 //end button
 
+edit.addEventListener('click' ,function(event){
+   let userText = prompt("Enter a Text");
+   let newText = document.createTextNode(userText);
+   edit.parentElement.replaceChild(newText, edit.parentElement.childNodes[0]);
+})
+
 //remove and  show in console.log
 addbutton.addEventListener('click' ,function(e){
 console.log(e.target.id=li);
